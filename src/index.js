@@ -1,5 +1,5 @@
-import store from "./store";
-import {bugAdded, bugResolved} from "./actions.js";
+import store from "./store/store";
+import {bugAdded, bugResolved} from "./store/bugs";
 
 
 store.subscribe(() =>{
@@ -7,6 +7,8 @@ store.subscribe(() =>{
 }) ;
 store.dispatch(bugAdded("Bug 1"));
 
-store.dispatch(bugAdded("Bug 2"))
+store.dispatch(bugAdded("Bug 2"));
+
+store.dispatch(bugAdded("Bug 3"));
 
 store.dispatch(bugResolved(1));
